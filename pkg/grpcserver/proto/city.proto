@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "./proto;proto";
+
+message City {
+    string id = 1;
+    string name = 2;
+}
+
+message Cities {
+    repeated City cities = 1;
+}
+
+message CityRead {
+
+}
+
+service CityService {
+    rpc ReadAll(CityRead) returns (Cities);
+    rpc Save(City) returns (City);
+}

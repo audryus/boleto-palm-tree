@@ -1,0 +1,13 @@
+app:
+  name: 'boleto-palm-tree'
+  version: '1.0'
+
+grpc:
+  port: '4040'
+
+logger:
+  level: 'info'
+
+database:
+  pool_max: 2
+  url: 'postgres://postgres:postgres@localhost:5432/city'
